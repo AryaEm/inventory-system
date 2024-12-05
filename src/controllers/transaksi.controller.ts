@@ -21,12 +21,12 @@ export const CreateBorrowRequest = async (req: Request, res: Response) => {
         }
 
         // Validasi: Pastikan tanggal valid
-        if (!isValidDate(borrow_date) || !isValidDate(return_date)) {
-            return res.status(400).json({
-                success: false,
-                message: "Tanggal yang dimasukkan tidak valid. Gunakan format YYYY-MM-DD"
-            });
-        }
+        // if (!isValidDate(borrow_date) || !isValidDate(return_date)) {
+        //     return res.status(400).json({
+        //         success: false,
+        //         message: "Tanggal yang dimasukkan tidak valid. Gunakan format YYYY-MM-DD"
+        //     });
+        // }
 
         const borrowDate = new Date(borrow_date);
         const returnDate = new Date(return_date);
